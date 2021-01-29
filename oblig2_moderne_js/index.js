@@ -414,7 +414,7 @@ try {
 
   /// Destructuring (bonus) ///
 
-  /*
+  
 	(function UseObjectDestructuring2() {
 		let obj = {
 			name: 'Oslo',
@@ -423,9 +423,7 @@ try {
 		}
 		
 		// Use object destructuring to change the 3 statements below into 1 statement.
-		let a = obj.name;
-		let b = obj.age;
-		let c = obj.add;
+		let {name:a, age:b, add:c} = obj
 
 		// Don't make changes below this line	
 		
@@ -435,14 +433,14 @@ try {
 		
 		solvedBonus++;
 	})();
-	*/
+	
 
-  /*
+  
 	(function UseFailSoftDestructuring() {
 		const arr = [1, 2];
 		
     // change the left side (before =) below to let the tests succeed.
-		let [a, b] = arr;
+		let [a,b,c=3,d] = arr 
 
 		// Don't make changes below this line	
 		
@@ -453,9 +451,9 @@ try {
 
 		solvedBonus++;
 	})();
-	*/
+	
 
-  /*
+  
 	(function UseNestedDestructuring() {
 		let obj = {
 			add: (x, y) => x + y,
@@ -464,9 +462,7 @@ try {
 			};
 		
 		// Use destructuring to change the 3 statements below into 1 statement.
-		let a = obj.add;
-		let b = obj.city.name;
-		let c = obj.arr.slice(1);
+		let {add:a, city:{name: b}, arr:[,...c]} = obj
 
 		// Don't make changes below this line	
 		
@@ -476,15 +472,15 @@ try {
 		
 		solvedBonus++;
 	})();
-	*/
+	
 
-  /*
+  
   (function UseDestructuring() {
     const arr = [1, 2, 3, 4];
 
     // Use spread & destructuring in the following 2 lines to move the first entry to the last.
-    const [first, rest] = arr;
-    const newArr = [rest, first];
+	const [first, ...rest] = arr;
+	const newArr = [...rest, first];
 
     // Don't make changes below this line
 
@@ -492,18 +488,18 @@ try {
 
     solvedBonus++;
 	})();
-	*/
+	
 
   /// Iterable (bonus) ///
-
-  /*
+ 
+  
 	(function UseGeneratorFunction() {
 		// Rewrite the function below to be a generator function ("function*" and "yield").
-		function range(start, end) {
+		function* range(start, end) {
 			let list = [];
 			while (start < end) {
 				list.push(start);
-				start++;
+				yield start++;
 			}
 			return list;
 		}	
@@ -519,7 +515,7 @@ try {
 
 		solvedBonus++;
 	})();
-	*/
+	
 
   if (solved === toSolve) {
     console.log(`
