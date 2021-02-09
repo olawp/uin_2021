@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body, ul, li, div, section, main, article, section, h1, button, p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: sans-serif;
+  }
+  
+  main {
+    max-width: 600px;
+    margin: 2rem auto;
+  }
+  
+  #traverse {
+    display: flex;
+    list-style: none;
+    margin-bottom: 2rem;
+  
+    li {
+      font-weight: bold;
+      padding: 1rem;
+      border: 1px solid #ccc;
+      margin-left: 0.5rem;
+  
+      &:first-of-type {
+        margin-left: 0;
+      }
+  
+      &.active {
+        background-color: aquamarine;
+      }
+    }
+  }
+  
+  #buttonWrapper {
+    button {
+      outline: none;
+      background: transparent;
+      border: 1px solid #333;
+      padding: 0.5rem 1rem;
+    }
+  }
+  
