@@ -8,14 +8,15 @@ import Alert from './components/Alert';
 const food = ['Pizza', 'Hamburger', 'Coke'];
 
 const App = () => {
-  const [inputFromChild, setInputFromChild] = useState('');
+  const [inputFromChild, setInputFromChild] = useState('ayy');
 
   return (
     <Wrapper>
       <h1>The magic happens here</h1>
       <MyComponent title="It works!" />
       <Food food={food} />
-      <Alert />
+      <Alert prop={setInputFromChild}/>
+      <p>{inputFromChild}</p>
     </Wrapper>
   );
 };
