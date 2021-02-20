@@ -1,8 +1,7 @@
 import React from 'react';
-import Title from './Title'
+import Title from './Title';
 
-
-const MyComponent = ({title}) => {
+const MyComponent = ({ title }) => {
   return (
     <>
       <h1>My First Component</h1>

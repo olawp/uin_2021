@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 
 const Alert = ({ prop }) => {
-  const [text, setText] = useState('lmao');
+  const [text, setText] = useState(
+    'Denne testen bruker en changehandler. Prøve å endre teksten.'
+  );
 
   const clickHandler = (e) => {
     console.log('Clicked');
     alert(text);
+    prop(text);
   };
 
   const changeHandler = (e) => {
@@ -15,9 +18,11 @@ const Alert = ({ prop }) => {
 
   return (
     <>
-      <button onClick={clickHandler}>Click me</button>
+      <button onClick={clickHandler} className="btn">
+        Click me
+      </button>
       <input onChange={changeHandler} value={text} />
-      <p>{text}</p>
+      <p>onChange: {text}</p>
     </>
   );
 };
