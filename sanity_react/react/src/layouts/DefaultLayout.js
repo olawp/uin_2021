@@ -3,8 +3,8 @@ import Navigation from '../components/Navigation';
 import { Main } from '../styles/Styles';
 
 const StyledHeader = styled.header`
-  background: #fff;
-  border-bottom: 1px solid #f5f5f5;
+  background: #1d1f21;
+  border-bottom: 1px solid #2bbc8a;
   margin-bottom: 60px;
   width: 100%;
   padding: 0 2rem;

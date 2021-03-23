@@ -19,7 +19,7 @@ const NavMenuItem = styled.li`
   }
 
   & > a {
-    color: #333;
+    color: #2bbc8a;
     display: block;
     font-size: 1.4rem;
     font-weight: 700;
@@ -28,8 +28,9 @@ const NavMenuItem = styled.li`
     text-decoration: none;
 
     &.active {
-      color: #007b5f;
+      color: #2bbc8a;
       border-bottom: 4px solid #007b5f;
+      margin-bottom: 10px;
     }
   }
 `;

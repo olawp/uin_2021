@@ -2,6 +2,7 @@ import client from './client';
 
 const movieFields = `
     title,
+    release,
     'actor': actor->name,
 `;
 

@@ -1,5 +1,9 @@
 import { useEffect, useState } from 'react';
+import { Container } from '../styles/Styles';
 import { getMovies } from '../utils/movieService';
+import Grid from './Grid';
+import Movie from './Movie';
+import Title from './Title';
 
 const Movies = () => {
   const [movies, setMovies] = useState(null);
@@ -26,9 +30,12 @@ const Movies = () => {
 
 
   return(
-    <p>
-      {JSON.stringify(movies)}
-    </p>
+    <Container>
+      <Title title="Movies" />
+      <Grid marginTop="2rem">
+      {movies?.length > 0 ? movies.map((movie, i)=> <Movie key={i} {...movie} />): null}
+      </Grid>
+    </Container>
   )
   
 };

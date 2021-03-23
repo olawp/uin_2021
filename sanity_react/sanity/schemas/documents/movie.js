@@ -16,8 +16,28 @@ const movie = {
             title: 'Skuespiller',
             to: [{type: 'actor'}],
             validation: (Rule) => Rule.required(),
+        },
+        {
+            name: 'release',
+            type: 'number',
+            title: "Utgivelsesår",
+            validation: (Rule) => Rule.required(),
+
         }
-    ]
+    ],
+    preview: {
+        select: {
+            title: 'title',
+            actor: 'actor.name'
+        },
+        prepare(selection) {
+            const {title, actor} = selection;
+            return {
+                title,
+                subtitle: `Skuespiller: ${actor}`,
+            }
+        }
+    }
 }
 
 export default movie;
