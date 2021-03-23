@@ -23,6 +23,11 @@ const movie = {
             title: "Utgivelsesår",
             validation: (Rule) => Rule.required(),
 
+        },
+        {
+            name: 'image',
+            title: 'Bilde',
+            type: 'contentImage',
         }
     ],
     preview: {

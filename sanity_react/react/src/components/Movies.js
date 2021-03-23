@@ -5,6 +5,7 @@ import Grid from './Grid';
 import Movie from './Movie';
 import Title from './Title';
 
+
 const Movies = () => {
   const [movies, setMovies] = useState(null);
   const [error, setError] = useState(null);
@@ -18,6 +19,7 @@ const Movies = () => {
         setMovies(data);
       } catch (error) {
         setError(error);
+        console.log(error);
       } finally {
         setLoading(false);
       }
@@ -25,14 +27,14 @@ const Movies = () => {
     fetchDataAsync();
   }, []);
 
-  if (!movies && error) return <div>Shits scuffed...</div>;
-  if (!movies) return <div>Laster ....</div>;
+  if (!movies && error) return <Container><Title title="Noe gikk galt" /></Container>;
+  if (!movies) return <Container><Title title="Laster" /></Container>;
 
 
   return(
     <Container>
       <Title title="Movies" />
-      <Grid marginTop="2rem">
+      <Grid marginTop="3rem">
       {movies?.length > 0 ? movies.map((movie, i)=> <Movie key={i} {...movie} />): null}
       </Grid>
     </Container>

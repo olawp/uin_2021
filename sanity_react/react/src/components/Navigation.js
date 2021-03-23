@@ -21,7 +21,7 @@ const NavMenuItem = styled.li`
   & > a {
     color: #2bbc8a;
     display: block;
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     font-weight: 700;
     line-height: 3.456;
     padding: 5px 0;
@@ -29,7 +29,7 @@ const NavMenuItem = styled.li`
 
     &.active {
       color: #2bbc8a;
-      border-bottom: 4px solid #007b5f;
+      border-bottom: 3px solid #007b5f;
       margin-bottom: 10px;
     }
   }

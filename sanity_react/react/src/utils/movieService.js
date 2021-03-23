@@ -3,7 +3,8 @@ import client from './client';
 const movieFields = `
     title,
     release,
-    'actor': actor->name,
+    'image': image{altText, asset->{url}},
+    'actor': actor->name
 `;
 
 export const getMovies = async () => {
