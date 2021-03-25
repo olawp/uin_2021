@@ -28,6 +28,33 @@ const movie = {
             name: 'image',
             title: 'Bilde',
             type: 'contentImage',
+        },
+        {
+            name: 'slug',
+            type: 'slug',
+            title: 'Slug',
+            description: "Filmens unike URL",
+            validation: (Rule) => Rule.required(),
+            options: {
+                source: 'title',
+                maxLength: 96,
+                
+            }
+        },
+        {
+            name: 'summary',
+            type: 'text',
+            title: 'Oppsummering',
+            description: 'En beskrivelse av filmen',
+            validation: (Rule) => Rule.required(),
+        },
+
+        {name: 'imdb',
+        type: 'string',
+        title: 'IMDB link',
+        description: 'Link til filmens IMDB side',
+        validation: (Rule) => Rule.required(),
+    
         }
     ],
     preview: {
