@@ -1,10 +1,11 @@
-import styled from "styled-components";
-import urlFor from "../utils/imageUrl";
-import { Link } from "react-router-dom";
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+// import urlFor from '../utils/imageUrl';
 
 const MovieContainer = styled.article`
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
   padding: 2rem 3rem;
+  height: 725px;
 `;
 
 const MovieHeading = styled.h2`
@@ -27,7 +28,7 @@ const StyledLink = styled(Link)`
 `;
 
 const Movie = ({ title, actor, release, image, slug }) => (
-  <StyledLink to={`/${slug}`}>
+  <StyledLink to={`/movies/${slug}`}>
     <MovieContainer>
       <MovieHeading>
         # {title} ({release})

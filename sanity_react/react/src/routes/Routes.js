@@ -12,8 +12,11 @@ const Routes = () => (
         <Route exact path="/">
           <Movies />
         </Route>
-        <Route exact path="/:slug">
-          <MoviePage/>
+        <Route exact path="/movies/:slug">
+          <MoviePage />
+        </Route>
+        <Route exact path="*">
+          <NoMatch />
         </Route>
       </Switch>
     </DefaultLayout>
